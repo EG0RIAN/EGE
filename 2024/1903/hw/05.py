@@ -18,8 +18,8 @@
 def compare_digits(n):
     chet = 0
     nechet = 0
-    for digit in n:
-        if digit % 2 == 0:
+    for digit in str(int(n, 2)):
+        if int(digit) % 2 == 0:
             chet += 1
         else:
             nechet += 1
@@ -38,9 +38,9 @@ def foo(n):
         if compare_digits(s) == 0:
             s += "0"
         if compare_digits(s) == 2:
-            if s % 2 == 0:
+            if int(s, 2) % 2 == 0:
                 s += "0"
-            if s % 2 != 0:
+            if int(s, 2) % 2 != 0:
                 s += "1"
     return int(s, 2)
 
